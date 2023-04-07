@@ -152,7 +152,6 @@ func (mysql *MySQL) IsText(column Column) bool {
 // GetIntegerDatatypes returns the integer datatypes for the MySQL database.
 func (mysql *MySQL) GetIntegerDatatypes() []string {
 	return []string{
-		"tinyint",
 		"smallint",
 		"mediumint",
 		"int",

@@ -228,6 +228,7 @@ func mapDbColumnTypeToGoType(s *settings.Settings, db database.Database, column 
 		// TODO handle special data types
 		switch column.DataType {
 		case "boolean":
+		case "tinyint":
 			goType = "bool"
 			if db.IsNullable(column) {
 				goType = getNullType(s, "*bool", "sql.NullBool")
